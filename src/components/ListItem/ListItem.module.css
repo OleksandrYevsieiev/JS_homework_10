@@ -1,0 +1,31 @@
+.listItem {
+  display: flex;
+  margin: 10px 0 10px 0;
+}
+
+.listItemChecked {
+  border: 1px solid #6d5acf;
+  background-color: #9dbcd4;
+  display: flex;
+  margin: 10px 0 10px 0;
+}
+
+.profileImg {
+  border: 3px solid #6d5acf;
+  width: 100px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.userInfo {
+  color: black;
+}
+
+.userTagline {
+  color: #8c8f8d;
+  font-size: 15px;
+}
+
+.binIcon {
+  border: 1px solid red;
+}
