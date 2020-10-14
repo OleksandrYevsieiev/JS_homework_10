@@ -1,24 +1,31 @@
 .listItem {
   display: flex;
+  flex-wrap: wrap;
   margin: 10px 0 10px 0;
+  overflow: hidden;
 }
 
 .listItemChecked {
   border: 1px solid #6d5acf;
   background-color: #9dbcd4;
+  box-shadow: 0 10px 15px darkgrey;
   display: flex;
+  flex-wrap: wrap;
   margin: 10px 0 10px 0;
+  overflow: hidden;
 }
 
 .profileImg {
+  width: 100px;
+  border-radius: 50%;
+  margin: 10px 20px 10px 20px;
+}
+
+.listItemChecked .profileImg {
   border: 3px solid #6d5acf;
   width: 100px;
   border-radius: 50%;
-  margin: 10px;
-}
-
-.userInfo {
-  color: black;
+  margin: 10px 20px 10px 20px;
 }
 
 .userTagline {
@@ -27,5 +34,28 @@
 }
 
 .binIcon {
-  border: 1px solid red;
+  margin-left: auto;
+  width: 50px;
+}
+
+@media screen and (max-width: 468px) {
+  .listItem,
+  .listItemChecked {
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid gray;
+  }
+
+  .listItem p,
+  .listItemChecked p {
+    text-align: center;
+  }
+
+  .userTagline {
+    text-align: center;
+  }
+
+  .binIcon {
+    margin: 0 auto;
+  }
 }
