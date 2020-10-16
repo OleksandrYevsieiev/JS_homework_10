@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Icon from '@mdi/react';
 import { mdiDelete } from '@mdi/js';
-import styles from './ListItem.module.css';
+import styles from './UserCard.module.css';
 
-export default class ListItem extends Component {
+export default class UserCard extends Component {
   constructor(props) {
       super(props);
       this.state = {
@@ -11,8 +11,8 @@ export default class ListItem extends Component {
       };
     }
 
-    handleDelete = (event) => {
-      event.currentTarget.parentNode.remove();
+    handleDelete = () => {
+      this.props.filterItems(this.props.name);
     };
 
     handleSelect = () => {
@@ -26,7 +26,7 @@ export default class ListItem extends Component {
     const { isSelected } = this.state;
 
       return (
-        <div className={isSelected ? styles.listItemChecked : styles.listItem} onClick={this.handleSelect}>
+        <div className={isSelected ? styles.userCardChecked : styles.userCard} onClick={this.handleSelect}>
         <img src ={user.name.profilePicture} className={styles.profileImg} alt="profile"/>
         <div>
         <p>{`${user.name.firstName} ${user.name.lastName}`}</p>
